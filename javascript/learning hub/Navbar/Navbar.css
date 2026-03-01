@@ -1,0 +1,15 @@
+nav {
+  margin-top: 20px;
+}
+
+nav ul {
+  display: flex;              
+  gap: 600px;   
+  list-style: none;             
+  
+}
+nav ul li {
+    cursor: pointer;
+    font-weight: 700;
+    color:blueviolet
+}
