@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="B.Nikhitha-CSE student portfolio">
+    <meta name="keywords" content="Artificial Intelligence">
+    <meta name="author" content="B.Nikhitha">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B.Nikhitha | CSE</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header p {
+            margin-top: 5px;
+        }
+
+        nav {
+            background-color: #34495e;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        figure {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        img {
+            border-radius: 50%;
+            border: 3px solid #2c3e50;
+        }
+
+        .skills ol {
+            padding-left: 20px;
+        }
+
+        .skills li {
+            margin-bottom: 5px;
+        }
+
+        .mydiv {
+            margin: 20px;
+            padding: 15px;
+            background-color: #dfe6e9;
+            border-left: 5px solid #2c3e50;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #2c3e50;
+            color: white;
+        }
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+
+            section {
+                margin: 10px;
+            }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>B.Nikhitha</h1>
+        <p><strong>Computer Science and Engineering</strong></p>
+        <p>Nandyal, AP, India</p>
+    </header>
+
+    <nav>
+        <a href="#profile">Profile</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#training">Training</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+        <section id="profile">
+            <h2>Professional Profile</h2>
+            <figure>
+                <img src="img1.jpg" alt="Nikhitha" width="200" height="200">
+            </figure>
+        </section>
+    </main>
+
+    <div class="mydiv">
+        <h3>About KSRMCE</h3>
+        <p>KSRM College of Engineering is located in Kadapa.</p>
+    </div>
+
+    <section>
+        <h2>Summary</h2>
+        <p>
+            Passionate and detail-oriented Computer Science student with hands-on experience 
+            in full-stack web development using the MERN stack. Skilled in building scalable web 
+            applications, APIs, and responsive user interfaces. Eager to contribute to real-world 
+            projects through internships and collaborative environments.
+        </p>
+    </section>
+     <section id="projects" class="card">
+    <h2>Projects</h2>
+
+    <article>
+      <h3>Student Grade Viewer Portal</h3>
+      <p>
+        Developed a web-based application that allows students to view academic grades,
+        integrating front-end interfaces with back-end functionality.
+      </p>
+    </article>
+
+    <article>
+      <h3>Internet Safety Awareness Application</h3>
+      <p>
+        Built an educational platform focused on promoting internet safety awareness
+        among school children through interactive and informative content.
+      </p>
+    </article>
+
+    <article>
+      <h3>seamless Doctor Appointment Booking System</h3>
+      <p>
+        Created an online doctor appointment booking platform that enables users to browse,
+        select, and schedule appointments with healthcare professionals through a web interface.
+      </p>
+    </article>
+
+    <article>
+      <h3>E-Commerce Website</h3>
+      <p>
+        Developed an e-commerce platform for purchasing clothing, gadgets,
+        and electronic devices with a user-friendly shopping experience.
+      </p>
+    </article>
+
+    <article>
+      <h3>AI Image Transformation Platform</h3>
+      <p>
+        Built an AI-based image transformation application that allows users
+        to apply different artistic styles and visual effects to their photos.
+      </p>
+    </article>
+  </section>
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <div class="skills">
+            <ol>
+                <li>Python</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Git</li>
+                <li>GitHub</li>
+                <li>VS Code</li>
+            </ol>  
+        </div>
+    </section>
+    <footer class="footer">
+  <p>© <span id="year"></span> Nikhitha Bollapu | Professional Portfolio</p>
+</footer>
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear(); 
+</script>
+
+
+</body>
+</html>
