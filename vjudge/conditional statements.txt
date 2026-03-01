@@ -1,0 +1,533 @@
+1) Write a program which prints 1000 "Hello World".
+
+Input
+There is no input for this problem.
+
+Output
+The output consists of 1000 lines. Print "Hello World" in each line.
+
+Inputcopy	Outputcopy
+No input
+Hello World
+Hello World
+Hello World
+Hello World
+Hello World
+Hello World
+Hello World
+.
+.
+.
+.
+.
+.
+Hello World
+class Main {
+    public static void main(String[] args) {
+    for(int i=0;i<1000;i++){
+        String message="Hello World";
+        System.out.println(message);
+    }
+}
+}
+2)Write a program which prints small/large/equal relation of given two integers a and b.
+
+Input
+Two integers a and b separated by a single space are given in a line.
+
+Output
+For given two integers a and b, print
+
+a < b
+if a is less than b,
+
+a > b
+if a is greater than b, and
+
+a == b
+if a equals to b.
+
+Constraints
+-1000 ≤ a, b ≤ 1000
+Inputcopy	Outputcopy
+1 2
+a < b
+Inputcopy	Outputcopy
+4 3
+a > b
+Inputcopy	Outputcopy
+5 5
+a == b
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        String output = (a < b) ? "a < b" : (a > b) ? "a > b" : "a == b";
+        System.out.println(output);
+        sc.close();
+    }
+}
+
+3)n
+n schoolchildren divide 
+k
+k apples evenly, the residue remains in the basket. How many apples remain in the basket?
+
+Input
+Two positive integers 
+n
+n and 
+k
+k not greater than 
+1500
+1500 — rarely are there more pupils in school, and where to find such a basket?
+
+Output
+Print the number of apples in the basket.
+
+Examples
+Inputcopy	Outputcopy
+3
+14
+2
+
+Inputcopy	Outputcopy
+10
+100
+0
+
+import java.util.Scanner;
+public class Main {
+ public static void main(String[] args) {
+  Scanner sc = new Scanner(System.in);
+  int n = sc.nextInt();
+ int k = sc.nextInt();
+ int remainder = k % n;
+ System.out.println(remainder);   
+ sc.close();
+ }
+}
+
+4)Chef has his lunch only between 
+1
+1 pm and 
+4
+4 pm (both inclusive).
+
+Given that the current time is 
+X
+X pm, find out whether it is lunchtime for Chef.
+
+Input Format
+The first line of input will contain a single integer 
+T
+T, the number of test cases. Then the test cases follow.
+Each test case contains a single line of input, containing one integer 
+X
+X.
+Output Format
+For each test case, print in a single line 
+YES
+YES if it is lunchtime for Chef. Otherwise, print 
+NO
+NO.
+
+You may print each character of the string in either uppercase or lowercase (for example, the strings 
+YeS
+YeS, 
+yEs
+yEs, 
+yes
+yes and 
+YES
+YES will all be treated as identical).
+
+Constraints
+1
+≤
+T
+≤
+12
+1≤T≤12
+1
+≤
+X
+≤
+12
+1≤X≤12
+Sample 1
+Inputcopy	Outputcopy
+3
+1
+7
+3
+YES
+NO
+YES
+**Test case 
+1
+1:** Lunchtime is between 
+1
+1 pm and 
+4
+4 pm (both inclusive). Since 
+1
+1 pm lies within lunchtime, the answer is 
+YES
+YES.
+Test case 
+2
+2: Lunchtime is between 
+1
+1 pm and 
+4
+4 pm (both inclusive). Since 
+7
+7 pm lies outside lunchtime, the answer is 
+NO
+NO.
+
+Test case 
+3
+3: Lunchtime is between 
+1
+1 pm and 
+4
+4 pm (both inclusive). Since 
+3
+3 pm lies within lunchtime, the answer is 
+YES
+YES.
+
+import java.util.Scanner;
+public class Main {
+ public static void main(String[] args) {
+Scanner sc = new Scanner(System.in); 
+if (sc.hasNextInt()) {
+int T = sc.nextInt();
+ for (int i = 0; i < T; i++) {
+ if (sc.hasNextInt()) {
+int X = sc.nextInt();
+if (X >= 1 && X <= 4) {
+ System.out.println("YES");
+  } else {
+ System.out.println("NO");
+ }
+  }
+ }
+}
+sc.close();
+    }
+}
+
+5)Chef considers the climate HOT if the temperature is above 
+20
+20, otherwise he considers it COLD. You are given the temperature 
+C
+C, find whether the climate is HOT or COLD.
+
+Input Format
+The first line of input will contain a single integer 
+T
+T, denoting the number of test cases.
+The first and only line of each test case contains a single integer, the temperature 
+C
+C.
+Output Format
+For each test case, print on a new line whether the climate is HOT or COLD.
+
+You may print each character of the string in either uppercase or lowercase (for example, the strings hOt, hot, Hot, and HOT will all be treated as identical).
+
+Constraints
+1
+≤
+T
+≤
+50
+1≤T≤50
+0
+≤
+C
+≤
+40
+0≤C≤40
+Sample 1
+Inputcopy	Outputcopy
+2
+21
+16
+HOT
+COLD
+**Test case 
+1
+1:** The temperature is 
+21
+21, which is more than 
+20
+20. So, Chef considers the climate `HOT`.
+Test case 
+2
+2: The temperature is 
+16
+16, which is not more than 
+20
+20. So, Chef considers the climate COLD.
+
+
+import java.util.Scanner;
+public class Main {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+if (sc.hasNextInt()) {
+int T = sc.nextInt();
+for (int i = 0; i < T; i++) {
+if (sc.hasNextInt()) {
+int C = sc.nextInt();
+if (C > 20) {
+System.out.println("HOT");
+} else {
+System.out.println("COLD");
+}
+}
+}
+}
+sc.close();
+}
+}
+
+6)n
+n schoolchildren divide 
+k
+k apples evenly, the residue remains in the basket. How many apples remain in the basket?
+
+Input
+Two positive integers 
+n
+n and 
+k
+k not greater than 
+1500
+1500 — rarely are there more pupils in school, and where to find such a basket?
+
+Output
+Print the number of apples in the basket.
+
+Examples
+Inputcopy	Outputcopy
+3
+14
+2
+
+Inputcopy	Outputcopy
+10
+100
+0
+import java.util.Scanner;
+public class Main {
+ public static void main(String[] args) {
+  Scanner sc = new Scanner(System.in);
+  int n = sc.nextInt();
+ int k = sc.nextInt();
+ int remainder = k % n;
+ System.out.println(remainder);   
+ sc.close();
+ }
+}
+
+7)Find the perimeter of a rectangle.
+
+Input
+Two positive integers 
+a
+a and 
+b
+ 
+(
+1
+≤
+a
+,
+b
+≤
+1000
+)
+b (1≤a,b≤1000) — the sides of the rectangle.
+
+Output
+Print the perimeter of the rectangle.
+
+Examples
+Inputcopy	Outputcopy
+3 4
+14
+
+import java.util.Scanner;
+public class Main {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+if (sc.hasNextInt()) {
+int a = sc.nextInt();
+int b = sc.nextInt();
+int perimeter = 2 * (a + b);
+System.out.println(perimeter);
+}
+sc.close();
+}
+}
+
+8)Integer 
+n
+n is given. Print the next even integer for 
+n
+n.
+
+Input
+One integer 
+n
+n.
+
+Output
+Print the next even integer after 
+n
+n.
+
+Examples
+Inputcopy	Outputcopy
+7
+8
+
+Inputcopy	Outputcopy
+4
+6
+import java.util.Scanner;
+public class Main {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);        
+ if (sc.hasNextInt()) {
+int n = sc.nextInt();
+ int nextEven;
+ if (n % 2 == 0) {
+ nextEven = n + 2;
+} else {
+nextEven = n + 1;
+ }
+System.out.println(nextEven);
+ }
+sc.close();
+ } 
+} 
+
+8)Find the sum of the first and last digits of a four-digit natural number.
+
+Input
+One four-digit natural number.
+
+Output
+Print the sum of the first and last digits of the number.
+
+Examples
+Inputcopy	Outputcopy
+1235
+6
+import java.util.Scanner;
+public class Main {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+int n = sc.nextInt();
+int firstDigit = n / 1000;
+int lastDigit = n % 10;
+System.out.println(firstDigit + lastDigit);
+sc.close();
+ }
+}
+
+9)Find the sum of the squares of two integers.
+
+Input
+Two integers 
+a
+a and 
+b
+b are given. Each of them does not exceed 
+10
+9
+10 
+9
+  in absolute value.
+
+Output
+Print the value of the expression 
+a
+2
++
+b
+2
+a 
+2
+ +b 
+2
+ .
+
+Examples
+Inputcopy	Outputcopy
+2 3
+13
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        long a = sc.nextLong();
+        long b = sc.nextLong();
+        long output = (a * a) + (b * b);
+        System.out.println(output); 
+        sc.close();
+    }
+}
+
+10)Find the sum of the squares of two integers.
+
+Input
+Two integers 
+a
+a and 
+b
+b are given. Each of them does not exceed 
+10
+9
+10 
+9
+  in absolute value.
+
+Output
+Print the value of the expression 
+a
+2
++
+b
+2
+a 
+2
+ +b 
+2
+ .
+
+Examples
+Inputcopy	Outputcopy
+2 3
+13
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        long a = sc.nextLong();
+        long b = sc.nextLong();
+        long output = (a * a) + (b * b);
+        System.out.println(output); 
+        sc.close();
+    }
+}
+
+
