@@ -1,0 +1,22 @@
+.img {
+  width: 100%;
+  height: auto;
+}       
+.tips ul {
+  background: #f4f9ff;
+  padding: 25px;
+  margin: 30px;
+  border-radius: 12px;
+  list-style-type: none;
+}
+.stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 70px 30px;
+  background: #185a9d;
+  color: black;
+}
+
+.stat h3 {
+  font-size: 36px;
+}
