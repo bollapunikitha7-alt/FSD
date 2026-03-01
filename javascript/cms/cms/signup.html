@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Signup | Medicare</title>
+  <link rel="stylesheet" href="cms.css">
+</head>
+<body>
+  <div class="signup-box">
+    <h2>Signup</h2>
+
+    <form onsubmit="return validation()">
+      <input type="text" id="name" placeholder="Full Name"><br>
+      <input type="email" id="email" placeholder="Email"><br>
+      <input type="password" id="password" placeholder="Password"><br>
+      <input type="password" id="confirmPassword" placeholder="Confirm Password"><br>
+      <input type="text" id="phone" placeholder="Contact Number"><br>
+      <button type="submit">Signup</button>
+    </form>
+
+    <p id="error-msg"></p>
+  </div>
+
+  <script src="cms.js"></script>
+</body>
+</html>
