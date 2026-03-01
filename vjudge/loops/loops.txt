@@ -1,0 +1,705 @@
+1\. Water Consumption 
+
+
+
+Recently, Chef visited his doctor. The doctor advised Chef to drink at least 
+
+2000
+
+2000 ml of water each day.
+
+
+
+Chef drank 
+
+X
+
+X ml of water today. Determine if Chef followed the doctor’s advice or not.
+
+
+
+Input Format
+
+The first line contains a single integer 
+
+T
+
+T — the number of test cases. Then the test cases follow.
+
+The first and only line of each test case contains one integer 
+
+X
+
+X — the amount of water Chef drank today.
+
+Output Format
+
+For each test case, output YES if Chef followed the doctor’s advice of drinking at least 
+
+2000
+
+2000 ml of water. Otherwise, output NO.
+
+
+
+You may print each character of the string in uppercase or lowercase (for example, the strings YES, yEs, yes, and yeS will all be treated as identical).
+
+
+
+Constraints
+
+1
+
+≤
+
+T
+
+≤
+
+2000
+
+1≤T≤2000
+
+1
+
+≤
+
+X
+
+≤
+
+4000
+
+1≤X≤4000
+
+
+
+**import java.util.\*;**
+
+**public class Main{**
+
+    **public static void main(String\[] args){**
+
+        **Scanner sc=new Scanner(System.in);**
+
+        **int T=sc.nextInt();**
+
+        **for(int h=0;h<T;h++){**
+
+            **int X=sc.nextInt();**
+
+            **if(X>=2000){**
+
+                **System.out.println("YES");**
+
+            **}**
+
+            **else{**
+
+                **System.out.println("NO");**
+
+            **}**
+
+        **}**
+
+        
+
+        
+
+    **}**
+
+**}**
+
+
+
+2\. I Can Use Both Hands! 
+
+Chef has a special ability: he can use both his left and right hands equally well, and at the same time!
+
+
+
+To put this ability into practice, Chef decides that he’s going to write a novel with his left hand, while writing code with his right.
+
+
+
+Chef needs 
+
+L
+
+L minutes to write a page with his left hand, and 
+
+R
+
+R minutes to write a line of code with his right.
+
+Chef defines his satisfaction to be the number of pages he’s started writing, plus the number of lines of code he’s finished writing.
+
+
+
+What will Chef’s satisfaction be after 
+
+M
+
+M minutes?
+
+
+
+Input Format
+
+The first line of input will contain a single integer 
+
+T
+
+T, denoting the number of test cases.
+
+The first and only line of each test case will contain three space-separated integers 
+
+L
+
+,
+
+R
+
+,
+
+L,R, and 
+
+M
+
+M — Chef writing speed, coding speed, and the number of minutes he has.
+
+Output Format
+
+For each test case, output on a new line the answer: Chef’s satisfaction after 
+
+M
+
+M minutes.
+
+
+
+Constraints
+
+1
+
+≤
+
+T
+
+≤
+
+1000
+
+1≤T≤1000
+
+1
+
+≤
+
+L
+
+,
+
+R
+
+,
+
+M
+
+≤
+
+10
+
+6
+
+1≤L,R,M≤10 
+
+6
+
+
+
+**import java.util.\*;**
+
+**public class Main{**
+
+    **public static void main(String\[] args){**
+
+        **Scanner sc=new Scanner(System.in);**
+
+        **int T=sc.nextInt();**
+
+        **for(int h=0;h<T;h++){**
+
+            **int L=sc.nextInt();**
+
+            **int R=sc.nextInt();**
+
+            **int M=sc.nextInt();**
+
+            **int pa=M/L;**
+
+            **if(M%L !=0){**
+
+                **pa++;**
+
+            **}**
+
+            **int li=M/R;**
+
+             **System.out.println(pa+li);**
+
+        **}**
+
+        
+
+        
+
+    **}**
+
+**}**
+
+
+
+3.Chef and Stocks
+
+Chef has started learning about the stock market and has already selected a favourite stock.
+
+
+
+He traded the stock for 
+
+N
+
+N consecutive days. Let 
+
+A
+
+i
+
+A 
+
+i
+
+​
+
+&nbsp; denotes the profit earned by Chef on the 
+
+i
+
+t
+
+h
+
+i 
+
+th
+
+&nbsp; day.
+
+Note that 
+
+A
+
+i
+
+<
+
+0
+
+A 
+
+i
+
+​
+
+&nbsp;<0 indicates that Chef had a loss on the 
+
+i
+
+t
+
+h
+
+i 
+
+th
+
+&nbsp; day.
+
+
+
+Chef wants to find the maximum amount of of profit he would have earned, if he skipped trading for exactly one day.
+
+
+
+Input Format
+
+The first line of input will contain a single integer 
+
+T
+
+T, denoting the number of test cases.
+
+Each test case consists of multiple lines of input.
+
+The first line of each test case contains 
+
+N
+
+N — the number of days.
+
+The next line denotes 
+
+N
+
+N space-separated integers, denoting the profit earned by Chef on the 
+
+i
+
+t
+
+h
+
+i 
+
+th
+
+&nbsp; day.
+
+Output Format
+
+For each test case, output on a new line, the maximum amount of of profit he would have earned, if he skipped trading for exactly one day.
+
+
+
+Constraints
+
+1
+
+≤
+
+T
+
+≤
+
+1000
+
+1≤T≤1000
+
+1
+
+≤
+
+N
+
+≤
+
+10
+
+5
+
+1≤N≤10 
+
+5
+
+&nbsp;
+
+−
+
+100
+
+≤
+
+A
+
+i
+
+≤
+
+100
+
+−100≤A 
+
+i
+
+​
+
+&nbsp;≤100
+
+The sum of 
+
+N
+
+N over all test cases won’t exceed 
+
+10
+
+6
+
+10 
+
+6
+
+&nbsp;.
+
+**import java.util.\*;**
+
+**public class Main{**
+
+    **public static void main(String\[] args){**
+
+        **Scanner sc=new Scanner(System.in);**
+
+        **int T=sc.nextInt();**
+
+        **for(int h=0;h<T;h++){**
+
+            **int N=sc.nextInt();**
+
+           **int total=0;**
+
+           **int mv=Integer.MAX\_VALUE;**
+
+           **for(int j=0;j<N;j++){**
+
+               **int X=sc.nextInt();**
+
+               **total=total+X;**
+
+               **mv=Math.min(mv,X);**
+
+           **}**
+
+           **System.out.println(total-mv);**
+
+        **}**
+
+        
+
+        
+
+    **}**
+
+**}**
+
+
+
+4.The Old Saint And Three Questions 
+
+Once upon a time, there was a hero and an old saint. And like in any story with a hero and an old saint, the old saint asked the hero — three questions!
+
+
+
+But here’s the twist: each question was a binary question, which means that the answer to each must be either a ‘Yes’ or a ‘No’, not none, not both. Our hero, who was not so wise in the ways of science, answered them arbitrarily and just hoped he is correct. The old saint, being so old, does not remember which answers were correct. The only thing that he remembers is - how many of them were ‘Yes’, and how many of them were ‘No’. Our hero will pass the test if the old saint cannot distinguish his responses from the set of correct answers i.e. if the number of ‘Yes’ and ‘No’ in the responses matches that in the correct answers, regardless of their order.
+
+
+
+You are given the answers to each of the three questions, and the responses of the hero to the same. Find whether the hero will be able to pass the old saint’s test.
+
+
+
+Input Format
+
+First line will contain 
+
+T
+
+T, the number of test cases. The description of the test cases follow.
+
+The first line of each test case consists of three space-separated integers 
+
+A
+
+1
+
+A 
+
+1
+
+​
+
+&nbsp; 
+
+A
+
+2
+
+A 
+
+2
+
+​
+
+&nbsp; 
+
+A
+
+3
+
+A 
+
+3
+
+​
+
+&nbsp;, representing the correct answers to the first, second, and third question respectively (
+
+0
+
+0 for ‘No’, 
+
+1
+
+1 for ‘Yes’).
+
+The second line of each test case consists of three space-separated integers 
+
+B
+
+1
+
+B 
+
+1
+
+​
+
+&nbsp; 
+
+B
+
+2
+
+B 
+
+2
+
+​
+
+&nbsp; 
+
+B
+
+3
+
+B 
+
+3
+
+​
+
+&nbsp;, representing the response of the hero to the first, second, and third question respectively (
+
+0
+
+0 for ‘No’, 
+
+1
+
+1 for ‘Yes’).
+
+Output Format
+
+For each test case, print “Pass” (without quotes) if the hero passes the old saint’s test, “Fail” (without quotes) otherwise.
+
+
+
+Constraints
+
+1
+
+≤
+
+T
+
+≤
+
+64
+
+1≤T≤64
+
+0
+
+≤
+
+A
+
+i
+
+,
+
+B
+
+i
+
+≤
+
+1
+
+0≤A 
+
+i
+
+​
+
+&nbsp;,B 
+
+i
+
+​
+
+&nbsp;≤1
+
+**import java.util.\*;**
+
+**public class Main{**
+
+    **public static void main(String\[] args){**
+
+        **Scanner sc=new Scanner(System.in);**
+
+        **int T=sc.nextInt();**
+
+        **for(int h=0;h<T;h++){**
+
+            **int A1=sc.nextInt();**
+
+            **int A2=sc.nextInt();**
+
+            **int A3=sc.nextInt();**
+
+            **int sumA=A1+A2+A3;**
+
+            **int B1=sc.nextInt();**
+
+            **int B2=sc.nextInt();**
+
+            **int B3=sc.nextInt();**
+
+            **int sumB=B1+B2+B3;**
+
+            **if(sumA==sumB){**
+
+                **System.out.println("Pass");**
+
+            **}**
+
+            **else{**
+
+                **System.out.println("Fail");**
+
+            **}**
+
+            
+
+        **}**
+
+        
+
+        
+
+    **}**
+
+**}**
+
+&nbsp;
