@@ -1,0 +1,113 @@
+Threads Assignment ### Problem: Multi-threading and Synchronization
+
+import java.util.*;
+class BankAccount {
+    private int balance;
+    public BankAccount(int balance) {
+        this.balance = balance;
+    }
+    public synchronized void withdraw(int amount) {
+        if (balance >= amount) {
+            System.out.println("Withdrawal of " + amount + " successful. Remaining balance: " + (balance - amount));
+            balance = balance - amount;
+        } else {
+            System.out.println("Insufficient balance for withdrawal of " + amount);
+        }
+    }
+}
+class UserThread extends Thread {
+    BankAccount account;
+    int amount;
+    public UserThread(BankAccount account, int amount) {
+        this.account = account;
+        this.amount = amount;
+    }
+    public void run() {
+        account.withdraw(amount);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter initial balance: ");
+        int balance = sc.nextInt();
+        BankAccount account = new BankAccount(balance);
+        System.out.print("Enter number of withdrawals: ");
+        int n = sc.nextInt();
+        UserThread[] threads = new UserThread[n];
+        for (int i = 0; i < n; i++) {
+            int amt = sc.nextInt();
+            threads[i] = new UserThread(account, amt);
+        }
+        for (int i = 0; i < n; i++) {
+            threads[i].start();
+        }
+    }
+}
+
+Abstract Class Implementation 
+import java.util.*;
+abstract class Media {
+    String title;
+    String creator;
+    int duration;
+    Scanner sc = new Scanner(System.in);
+    abstract void printDetails();
+}
+class Book extends Media {
+    int pages;
+    void printDetails() {
+        System.out.println("Entering Book Details...");
+        System.out.print("Enter Book Title: ");
+        title = sc.nextLine();
+        System.out.print("Enter Author Name: ");
+        creator = sc.nextLine();
+        System.out.print("Enter Number of Pages: ");
+        pages = sc.nextInt();
+        sc.nextLine(); 
+        System.out.println("Book - Title: " + title +
+                ", Author: " + creator +
+                ", Pages: " + pages);
+    }
+}
+class Movie extends Media {
+    void printDetails() {
+        System.out.println("Entering Movie Details...");
+        System.out.print("Enter Movie Title: ");
+        title = sc.nextLine();
+        System.out.print("Enter Director Name: ");
+        creator = sc.nextLine();
+        System.out.print("Enter Duration (in minutes): ");
+        duration = sc.nextInt();
+        sc.nextLine();
+        System.out.println("Movie - Title: " + title +
+                ", Director: " + creator +
+                ", Duration: " + duration + " mins");
+    }
+}
+class Song extends Media {
+    void printDetails() {
+        System.out.println("Entering Song Details...");
+        System.out.print("Enter Song Title: ");
+        title = sc.nextLine();
+        System.out.print("Enter Singer Name: ");
+        creator = sc.nextLine();
+        System.out.print("Enter Duration (in minutes): ");
+        duration = sc.nextInt();
+        sc.nextLine();
+        System.out.println("Song - Title: " + title +
+                ", Singer: " + creator +
+                ", Duration: " + duration + " mins");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Media m;  
+        m = new Book();
+        m.printDetails();
+        m = new Movie();
+        m.printDetails();
+        m = new Song();
+        m.printDetails();
+    }
+}
